@@ -4,19 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<Captain> captains = new List<Captain>();
-
-        Captain sisko = new Captain("Benjamin", "Sisko", "Defiant");
-        Captain archer = new Captain("Jonathan", "Archer");
-        Captain janeway = new Captain("Kathryn", "Janeway", "Voyager");
-        Captain picard = new Captain("Jean-Luc", "Picard");
-        Captain kirk = new Captain("James", "Kirk");
-
-        captains.Add(sisko);
-        captains.Add(archer);
-        captains.Add(janeway);
-        captains.Add(picard);
-        captains.Add(kirk);
+        List<Captain> captains = new List<Captain>() {
+            new Captain("Benjamin", "Sisko", "Defiant"),
+            new Captain("Jonathan", "Archer"),
+            new Captain("Kathryn", "Janeway", "Voyager"),
+            new Captain("Jean-Luc", "Picard"),
+            new Captain("James", "Kirk")
+        };
 
         bool isRunning = true;
 
@@ -77,7 +71,7 @@ class Program
     {
         foreach (Captain captain in captainList)
         {
-            captain.Info();
+            Console.WriteLine(captain);
         }
         Console.WriteLine("");
     }

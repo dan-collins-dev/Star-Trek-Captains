@@ -6,7 +6,7 @@ public class Captain
     public string LastName { get; private set; }
     public string ShipName { get; private set; }
     
-    public string Title => $"Captain {LastName}";
+    public string Title => $"Captain {FirstName} {LastName}";
 
 
     public Captain(string firstName, string lastName, string shipName="Enterprise")
@@ -16,8 +16,5 @@ public class Captain
         ShipName = shipName;
     }
 
-    public void Info()
-    {
-        Console.WriteLine($"{Title} is the captain of the USS {ShipName}");
-    }
+    public override string ToString() => $"{Title} is the captain of the USS {ShipName}";   
 }
